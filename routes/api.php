@@ -39,7 +39,6 @@ Route::delete('/loans/{id}', [\App\Http\Controllers\ApiController::class, 'delet
 Route::get('/payment_schedule', [\App\Http\Controllers\ApiController::class, 'fetchPaymentSchedule']);
 Route::post('/payment_schedule', [\App\Http\Controllers\ApiController::class, 'createPaymentSchedule']);
 
-
 // for payments
 Route::get('/loan_payments', [\App\Http\Controllers\ApiController::class, 'fetchLoanPayments']);
 Route::get('/loan_payments/{id}', [\App\Http\Controllers\ApiController::class, 'fetchLoanPayment']);
