@@ -17,6 +17,6 @@ class Repayment extends Model
 
     public function loan(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Loan::class);
+        return $this->belongsTo(Loan::class, 'loan_id');
     }
 }

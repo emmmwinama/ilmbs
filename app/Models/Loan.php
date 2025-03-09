@@ -24,6 +24,10 @@ class Loan extends Model
 
     public function repaymentSchedule(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(RepaymentSchedule::class);
+        return $this->hasMany(RepaymentSchedule::class, 'loan_id');
+    }
+
+    public function repayment(){
+        return $this->hasMany(Repayment::class, 'loan_id');
     }
 }

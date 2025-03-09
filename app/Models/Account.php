@@ -13,4 +13,8 @@ class Account extends Model
         'account_number',
         'account_name',
     ];
+
+    public function loan(){
+        return $this->hasMany(Loan::class, 'account_id');
+    }
 }

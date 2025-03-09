@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('account_id')->constrained()->onDelete('cascade');
-            $table->float('loan_amount');
+            $table->decimal('loan_amount', 15, 2);
             $table->integer('loan_term');
-            $table->float('interest_rate');
+            $table->decimal('interest_rate', 15, 2);
             $table->enum('status', ['pending', 'repaid'])->default('pending');
             $table->timestamps();
         });
